@@ -28,7 +28,6 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
-|user_id|integer|null: false, foreign_key: true|
 
 ### Association
 - has_many :users, through: :members
@@ -44,7 +43,6 @@ Things you may want to cover:
 |name|integer|null: false|
 |email|integer|null: false, unique: true|
 |password|integer|null: false|
-|group_id|integer|null: false, foreign_key: true|
 
 ### Association
 - has_many :groups, through: :members 
