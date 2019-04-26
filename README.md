@@ -47,7 +47,7 @@ Things you may want to cover:
 |group_id|integer|null: false, foreign_key: true|
 
 ### Association
-- has_many :groups, through: :members ,
+- has_many :groups, through: :members 
 - has_many :members
 - has_many :messages
 
