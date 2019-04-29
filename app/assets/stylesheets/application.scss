@@ -2,5 +2,38 @@
 header {
   height:82px;
   width:100%;
-  
+  position:fixed;
+
+    .header-left {
+      height:100%;
+      width:300px;
+      background-color: #253141;
+      position: absolute;
+    }
+
+    .header-right {
+      height:100%;
+      width: calc(100vw -300px) ;
+      background-color: #eeeeee;
+      // position: relative;
+    }
 }
+.contents {
+  height: calc(100% - 82px);
+  width: 100%;
+  .content-left {
+
+  }
+  
+  .content-right {
+
+    footer {
+      position:fixed;
+
+    }
+  }
+}
+
+
+
+
