@@ -1,8 +1,155 @@
-%header
-  .header-left 
-  .header-right
+.wrapper
+  .left-contents 
+    .left-top 
+      %p.name name
+      %ul.menu
 
-%div.contents
-  .content-left
-  .content-right
-    %footer
+        %li.cog
+          %i.fas.fa-edit
+        %li.edit
+          %i.fas.fa-cog
+    .left-body
+      .group_name
+      
+        -# = render partial: "group"
+        %p.group_name badhop
+        %p.group_message Skrr Skrr
+      .group_name
+      
+        -# = render partial: "group"
+        %p.group_name badhop
+        %p.group_message Skrr Skrr
+      .group_name
+      
+        -# = render partial: "group"
+        %p.group_name badhop
+        %p.group_message Skrr Skrr
+      .group_name
+      
+        -# = render partial: "group"
+        %p.group_name badhop
+        %p.group_message Skrr Skrr
+      .group_name
+      
+        -# = render partial: "group"
+        %p.group_name badhop
+        %p.group_message Skrr Skrr
+      .group_name
+      
+        -# = render partial: "group"
+        %p.group_name badhop
+        %p.group_message Skrr Skrr
+      .group_name
+      
+        -# = render partial: "group"
+        %p.group_name badhop
+        %p.group_message Skrr Skrr
+      
+      .group_name
+      
+        -# = render partial: "group"
+        %p.group_name badhop
+        %p.group_message Skrr Skrr
+      .group_name
+      
+        -# = render partial: "group"
+        %p.group_name badhop
+        %p.group_message Skrr Skrr
+      .group_name
+      
+        -# = render partial: "group"
+        %p.group_name badhop
+        %p.group_message Skrr Skrr
+  .main-contents
+    .main-top
+      -# %p.border{border: solid 10px #eeeee }
+      .group group
+      .member Member : name name
+      %a.button{:href => "#create_group"}Edit
+    .main-body
+      .groups
+        .groups_top
+          -# = render partial: "message"
+          %p.group_member Tiji Jojo
+          %p.message_time 2019/04/26(Fri) 18:34:00
+        %p.group_member_message White T-shirt
+      .groups
+        .groups_top
+          -# = render partial: "message"
+          %p.group_member Tiji Jojo
+          %p.message_time 2019/04/26(Fri) 18:34:00
+        %p.group_member_message White T-shirt
+      .groups
+        .groups_top
+          -# = render partial: "message"
+          %p.group_member Tiji Jojo
+          %p.message_time 2019/04/26(Fri) 18:34:00
+        %p.group_member_message White T-shirt
+      .groups
+        .groups_top
+          -# = render partial: "message"
+          %p.group_member Tiji Jojo
+          %p.message_time 2019/04/26(Fri) 18:34:00
+        %p.group_member_message White T-shirt
+      .groups
+        .groups_top
+          -# = render partial: "message"
+          %p.group_member Tiji Jojo
+          %p.message_time 2019/04/26(Fri) 18:34:00
+        %p.group_member_message White T-shirt
+      .groups
+        .groups_top
+          -# = render partial: "message"
+          %p.group_member Tiji Jojo
+          %p.message_time 2019/04/26(Fri) 18:34:00
+        %p.group_member_message White T-shirt
+      .groups
+        .groups_top
+          -# = render partial: "message"
+          %p.group_member Tiji Jojo
+          %p.message_time 2019/04/26(Fri) 18:34:00
+        %p.group_member_message White T-shirt
+      .groups
+        .groups_top
+          -# = render partial: "message"
+          %p.group_member Tiji Jojo
+          %p.message_time 2019/04/26(Fri) 18:34:00
+        %p.group_member_message White T-shirt
+      .groups
+        .groups_top
+          -# = render partial: "message"
+          %p.group_member Tiji Jojo
+          %p.message_time 2019/04/26(Fri) 18:34:00
+        %p.group_member_message White T-shirt
+      .groups
+        .groups_top
+          -# = render partial: "message"
+          %p.group_member Tiji Jojo
+          %p.message_time 2019/04/26(Fri) 18:34:00
+        %p.group_member_message White T-shirt
+      .groups
+        .groups_top
+          -# = render partial: "message"
+          %p.group_member Tiji Jojo
+          %p.message_time 2019/04/26(Fri) 18:34:00
+        %p.group_member_message White T-shirt
+      .groups
+        .groups_top
+          -# = render partial: "message"
+          %p.group_member Tiji Jojo
+          %p.message_time 2019/04/26(Fri) 18:34:00
+        %p.group_member_message White T-shirt
+    .main-bottom
+      .form-box
+        .form-and-icon
+          %input{ class: "white_box", id: "message", :name => "message",  :type => "text" , :placeholder => "type a message"}
+          %label.test
+            %i.far.fa-image
+            -# %input.file{type: "file"}
+
+        
+        .mask_send  
+          %input.send{:type => "submit",value:"Send"}/
+
+
+ 
