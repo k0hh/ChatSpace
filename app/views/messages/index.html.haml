@@ -1,12 +1,15 @@
 .wrapper
   .left 
     .left__top 
-      %p.name name
+      %p.name  
+        = current_user.name
       %ul.menu
         %li.cog
-          %i.fa.fa-edit
+          = link_to do
+            %i.fa.fa-edit{class:'icon'}
         %li.edit
-          %i.fa.fa-cog
+          = link_to 'users/edit' do
+            %i.fa.fa-cog{class:'icon'}
     .left__body
 
       .group_name
@@ -17,8 +20,8 @@
     .main__top
       .group-top group
       .member Member : name name
-      %a{href:"create_group"}
-        %a.button{href: "create_group"}Edit
+      %a{href:"groups/edit"}
+        %a.button{href: "groups/edit"}Edit
     .main__body
       = render partial: "messages/message"
       
