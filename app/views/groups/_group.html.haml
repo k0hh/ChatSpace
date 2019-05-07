@@ -1,2 +1,7 @@
-%p.group__name badhop
-%p.group__message Skrr Skrr
+.group_name
+  - current_user.groups.each do |group|
+    = link_to group_messages_path(group) do
+      %p.group__name 
+        = group.name
+      %p.group__message 
+        メッセージはまだありません
