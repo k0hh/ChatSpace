@@ -2,13 +2,12 @@
   .left
     .left__top 
       %p.name 
-        = current_user.name
+        current_user.name
       %ul.menu
 
         %li.cog
           
           %i.fas.fa-edit
-            = link_to "","root_path"
         %li.edit
           
           %i.fas.fa-cog
@@ -24,8 +23,8 @@
       -# %p.border{border: solid 10px #eeeee }
       .group-top group
       .member Member : name name
-      %a{href:"groups/edit"}
-        %a.button{:href => "groups/edit"}Edit
+      %a{href:"create_group"}
+        %a.button{:href => "create_group"}Edit
     .main__body
       .groups
         .groups__top
@@ -41,7 +40,7 @@
           %label.test{for: "image-input"}
             %i.far.fa-image
           %input.image-label-input{type: "file",id: "image_input"}
-            %input.file{type: "file"}
+            -# %input.file{type: "file"}
 
         
         .mask-send  
