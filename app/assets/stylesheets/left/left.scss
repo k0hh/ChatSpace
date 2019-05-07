@@ -30,20 +30,7 @@
           margin-left:0.3rem;
           font-size:0.9em;
         }
-        .cog{
-          i.fa.fa-edit {
-            list-style: none;
-            -webkit-text-stroke: 1px #253141;
-          }
-
-        }
-        .edit{
-          i.fa.fa-edit {
-            list-style: none;
-            -webkit-text-stroke: 1px #253141;
-          }
-
-        }
+        
         
       }
   }
@@ -61,3 +48,12 @@
     position:fixed;
     }
 }
+
+
+  i.fa.fa-edit,i.fa.fa-cog{
+    list-style: none;
+    -webkit-text-stroke: 0.3px #253141;
+    color:$white;
+  }
+
+
