@@ -175,7 +175,7 @@ input.image-label-input{
   display:none;
 }
 
-main__bottom {
+&__bottom {
   width: calc(100% - 300px);
   height:90px;
   position:fixed;
@@ -211,10 +211,10 @@ main__bottom {
 }
 
 i.far.fa-image{
-  font-size: x-large;
+  font-size: xx-large;
   display: inline-block;
-  line-height: 35px;
+  line-height: 50px;
   z-index:100;
-  // position: absolute;
+  position: absolute;
 }
      
