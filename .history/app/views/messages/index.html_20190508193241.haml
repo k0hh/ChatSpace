@@ -1,14 +1,33 @@
 .wrapper
+  .left
+    .left__top 
+      %p.name 
+        = current_user.name
+      %ul.menu
+
+        %li.cog
+          
+          %i.fas.fa-edit
+            = link_to "","root_path"
+        %li.edit
+          
+          %i.fas.fa-cog
+    .left__body
+      .group__name
+      
+        -# = render partial: "group"
+        %p.group__name badhop
+        %p.group__message Skrr Skrr
+  
   .main
+    .main
     .main__top
       .group-top group
       .member Member : name name
       %a{href:"groups/edit"}
         %a.button{href: "groups/edit"}Edit
     .main__body
-      = render partial: "messages/message"
-      
-      
+      -# = render partial: "shared/message"
     .main__bottom
       .form-box
         .form-and-icon
@@ -18,4 +37,6 @@
             %input.image-label-input{type: "file",id: "image_input"}
         .mask-send  
           %input.send{type: "submit",value:"Send"}/
-          
+
+
+ 
