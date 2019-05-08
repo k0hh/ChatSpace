@@ -95,7 +95,7 @@ html {
                       display: inline-block;
                       line-height: 50px;
                       z-index:100;
-                      position: absolute;
+                      // position: absolute;
                     }
                 }
               }
@@ -218,7 +218,7 @@ input.far.fa-image::before{
   // position: absolute;
 }
      
-input.hidden {
+input.file {
   display: none;
   z-index:1000;
 }
