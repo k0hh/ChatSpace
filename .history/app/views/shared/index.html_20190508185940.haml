@@ -1,0 +1,22 @@
+.wrapper
+  .main
+    .main__top
+      .group-top group
+      .member Member : name name
+      %a{href:"groups/edit"}
+        %a.button{href: "groups/edit"}Edit
+    .main__body
+      = render partial: "messages/message"
+      
+      
+    .main__bottom
+      .form-box
+        .form-and-icon
+          %input.whitebox{id: "message", name:  "message",  type: "text" , placeholder: "type a message"}
+          %label.test{for: "image_input"}
+            %i.far.fa-image
+            %fail_field
+            -# %input.image-label-input{type: "file",id: "image_input"}
+        .mask-send  
+          %input.send{type: "submit",value:"Send"}/
+          
