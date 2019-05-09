@@ -1,0 +1,51 @@
+.wrapper
+  .left
+    .left__top 
+      %p.name 
+        = current_user.name
+      %ul.menu
+
+        %li.cog
+          
+          %i.fas.fa-edit
+            = link_to "","root_path"
+        %li.edit
+          
+          %i.fas.fa-cog
+    .left__body
+      .group__name
+      
+        -# = render partial: "group"
+        %p.group__name badhop
+        %p.group__message Skrr Skrr
+  
+  .main
+    .main__top
+      -# %p.border{border: solid 10px #eeeee }
+      .group-top group
+      .member Member : name name
+      %a{href:"groups/edit"}
+        %a.button{:href => "groups/edit"}Edit
+    .main__body
+      .groups
+        .groups__top
+          -# = render partial: "message"
+          %p.group__member Tiji Jojo
+          %p.message__time 2019/04/26(Fri) 18:34:00
+        %p.group_member__message White T-shirt
+      
+    .main__bottom
+      .form-box
+        .form-and-icon
+          %input{ class: "white_box", id: "message", :name => "message",  :type => "text" , :placeholder => "type a message"}
+          %label.test{for: "image-input"}
+            %i.far.fa-image
+              %input.image-label-input{type: "file",id: "image_input"}
+                %input.file{type: "file"}
+
+        
+        .mask-send  
+          %input.send{:type => "submit",value:"Send"}/
+
+
+ 
