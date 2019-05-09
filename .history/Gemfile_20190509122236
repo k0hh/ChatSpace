@@ -59,5 +59,4 @@ gem 'devise'
 
 #画像アップローダーCarrierWave
 gem 'carrierwave'
-#画像リサイズ 
-gem 'mini_magick'
+gem 'rmagick'
