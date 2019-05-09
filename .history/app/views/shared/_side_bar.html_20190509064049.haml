@@ -11,7 +11,7 @@
           = link_to 'users/edit' do
             %i.fa.fa-cog{class:'icon'}
     .left__body
-      - current_user.groups.each do |group|
+       - current_user.groups.each do |group|
         = link_to group_messages_path(group) do
           .group__name
             = group.name
@@ -20,3 +20,4 @@
 
       = render partial: "groups/group"
       
+        

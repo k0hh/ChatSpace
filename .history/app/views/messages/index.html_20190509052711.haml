@@ -5,13 +5,15 @@
         = current_user.name
       %ul.menu
         %li.cog
-          = link_to 'groups/new' do
+          = link_to 'group/new' do
             %i.fa.fa-edit{class:'icon'}
         %li.edit
           = link_to 'users/edit' do
             %i.fa.fa-cog{class:'icon'}
     .left__body
-      = render partial: "groups/group"  
+      = render partial: "groups/group"
+      
+      
   .main
     .main
     .main__top
