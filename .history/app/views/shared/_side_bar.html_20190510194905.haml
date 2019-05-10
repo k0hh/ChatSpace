@@ -1,0 +1,20 @@
+.wrapper
+  .left
+    .left__top 
+      %p.name 
+        = current_user.name
+      %ul.menu
+        %li.cog
+          = link_to "groups/new" do
+            = fa_icon 'edit', class: 'icon'
+        %li.edit   
+          = link_to "users/edit" do
+            = fa_icon 'cog', class: 'icon'
+    .left__body
+      .groups
+        - current_user.groups.each do |group|style: ‘text-decoration: none;
+          = link_to group_messages_path(group)style: ‘text-decoration: none; do
+            .group__name
+              = group.name
+            .group__message
+              メッセージはまだありません。

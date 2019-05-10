@@ -60,26 +60,18 @@ li.cog {
 .left__body {
   background-color:#2f3e51 ;
   height: 100%;
-  padding-top:100px;
-  box-sizing:border-box;
-  .groups {
-    padding-top:20px;
-    text-decoration:none;
-  }
-    .group {
-      box-sizing: border-box;
-      text-decoration:none;
-      &__name {
-        color: $white;
-        font-size: 15px;
-        text-decoration:none;
-        padding-bottom:5px;
-      }
-      &__message {
-        color: $white;
-        font-size: 11px;
-        padding-bottom:40px;
-        text-decoration:none;
-      }
+  padding: 0 20px;
+  .group {
+    box-sizing: border-box;
+    padding: 20px 0 40px;
+    &__name {
+      color: $white;
+      font-size: 15px;
     }
+    &__message {
+      color: $white;
+      font-size: 11px;
+      margin-top: 5px;
+    }
+  }
 }

@@ -64,11 +64,10 @@ li.cog {
   box-sizing:border-box;
   .groups {
     padding-top:20px;
-    text-decoration:none;
   }
     .group {
       box-sizing: border-box;
-      text-decoration:none;
+      
       &__name {
         color: $white;
         font-size: 15px;

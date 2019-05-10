@@ -64,7 +64,6 @@ li.cog {
   box-sizing:border-box;
   .groups {
     padding-top:20px;
-    text-decoration:none;
   }
     .group {
       box-sizing: border-box;
@@ -72,14 +71,13 @@ li.cog {
       &__name {
         color: $white;
         font-size: 15px;
-        text-decoration:none;
+        
         padding-bottom:5px;
       }
       &__message {
         color: $white;
         font-size: 11px;
         padding-bottom:40px;
-        text-decoration:none;
       }
     }
 }

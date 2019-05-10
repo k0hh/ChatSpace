@@ -1,0 +1,17 @@
+.wrapper
+  .left
+    .left__top 
+      %p.name 
+        = current_user.name
+      %ul.menu
+        %li.cog
+          = link_to "groups/new" do
+            = fa_icon 'pencil-square-o', class: 'icon'
+        %li.edit   
+          = link_to "users/edit" do
+            = fa_icon 'pencil-square-o', class: 'icon'
+    .left__body
+      .group__name
+        -# = render partial: "group"
+        %p.group__name 
+        %p.group__message

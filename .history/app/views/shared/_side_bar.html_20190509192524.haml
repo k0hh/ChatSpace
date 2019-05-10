@@ -1,0 +1,17 @@
+.wrapper
+  .left
+    .left__top 
+      %p.name 
+        = current_user.name
+      %ul.menu
+        %li.cog
+          %i.fas.fa-edit    
+        %li.edit   
+          %i.fas.fa-cog
+    .left__body
+      .group__name
+      
+        -# = render partial: "group"
+        %p.group__name badhop
+        %p.group__message Skrr Skrr
+  
