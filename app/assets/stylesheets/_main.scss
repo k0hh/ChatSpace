@@ -13,7 +13,7 @@ html {
         &__top {
           width:calc(100vw - 300px);
           height:100px;
-          position:fixed;
+          position: absolute;
           left:300px;
           top:0px;
           box-sizing:border-box;
