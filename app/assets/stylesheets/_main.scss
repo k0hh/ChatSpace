@@ -70,7 +70,7 @@ html {
           background-color: #ddd;
           padding:20px 10px 0  40px;
           box-sizing:border-box;
-            .form-box {
+            .form {
               display: flex;
               .form-and-icon {
                 display: flex;
@@ -79,7 +79,7 @@ html {
                 position: relative;
                 width: calc(100% - 145px);
                 box-sizing:border-box;
-                #message{
+                .white-box{
                   width:100%;
                   font-size :16px;
                   line-height:16px;
@@ -90,6 +90,18 @@ html {
                   box-sizing:border-box;
                   position: relative;
                   color:#434a54;
+                    .test{
+                      width:100%;
+                      font-size :16px;
+                      line-height:16px;
+                      height:50px;
+                      padding:  0  40px 0 10px;
+                      border-style:none;
+                      background-color:$white;
+                      box-sizing:border-box;
+                      position: relative;
+                      color:#434a54;
+                    }
                     i.far.fa-image{
                       font-size: xx-large;
                       display: inline-block;
@@ -99,25 +111,25 @@ html {
                     }
                 }
               }
-              .mask-send {
+              .send {
                 position: absolute;
                 float:right;
                 clear:both;
                 z-index:90;
                 right:40px;
-                input.send {
-                  height:50px;
-                  width:100px;
-                  margin: 0 0 0 0;
-                  background-color:$sky_blue;
-                  text-align: center;
-                  color:$white;
-                  padding:0 30px;
-                  box-sizing:border-box;
-                  cursor: pointer;
-                  clear:both;
-                  z-index:11;
-                }
+                height:50px;
+                width:100px;
+                margin: 0 0 0 0;
+                background-color:$sky_blue;
+                text-align: center;
+                color:$white;
+                padding:0 30px;
+                box-sizing:border-box;
+                cursor: pointer;
+                clear:both;
+                z-index:11;
+                top:20px;
+                
               }
             }
         }
@@ -129,15 +141,7 @@ html {
 ul.menu {
   display: flex;
 }
-label.test{
-  position: absolute;
-  right:10px;
-  top: 10px;
-  z-index:90;
-  color: #000;
-  font-size: x-large;
-  font-size: 1.3rem;
-}
+
 p.group__name {
   color:$white;
   font-size:15px;
@@ -171,9 +175,6 @@ p.group__message{
     color:#434A54;
   }
 }
-.image-label-input{
-  display:none;
-}
 
 .main__bottom {
   width: calc(100% - 300px);
@@ -185,7 +186,7 @@ p.group__message{
   box-sizing:border-box;
 }
 
-.form-box {
+.form {
   display: flex;
 }
 .form-and-icon {
@@ -197,8 +198,8 @@ p.group__message{
   box-sizing:border-box;
 }
 
-#message{
-  width:100%;
+.white-box{
+  width:calc(100% - 145px);
   font-size :16px;
   line-height:16px;
   height:50px;
@@ -210,7 +211,7 @@ p.group__message{
   color:#434a54;
 }
 
-input.far.fa-image::before{
+.far.fa-image::before{
   font-size: x-large;
   display: inline-block;
   line-height: 35px;
@@ -218,7 +219,27 @@ input.far.fa-image::before{
   // position: absolute;
 }
      
-input.hidden {
+.hidden {
   display: none;
   z-index:1000;
+}
+
+.test{
+  position: absolute;
+  right:10px;
+  top: 0px;
+  z-index:90;
+  color: #000;
+  font-size: x-large;
+  font-size: 1.3rem;
+}
+.form__mask{
+  position: absolute;
+  // width:100px;
+  // height:50px;
+  top:30px;
+  right:155px;
+}
+.new_message {
+  width:100%;
 }
