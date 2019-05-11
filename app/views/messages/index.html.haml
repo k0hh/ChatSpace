@@ -17,8 +17,7 @@
             .group__name
               = group.name
             .group__message
-              メッセージはまだありません。
-
+              = group.show_last_message
   .main
     .main__top
       -# %p.border{border: solid 10px #eeeee }
@@ -27,12 +26,9 @@
       %a{href:"groups/edit"}
         %a.button{:href => "groups/edit"}Edit
     .main__body
-      .groups
-        .groups__top
-          -# = render partial: "message"
-          %p.group__member Tiji Jojo
-          %p.message__time 2019/04/26(Fri) 18:34:00
-        %p.group_member__message White T-shirt
+      .messages
+        = render @messages
+        
       
     .main__bottom
       -# %form.form-box
@@ -49,7 +45,7 @@
           = f.text_field :content, class: 'white-box', placeholder: 'type a message'
           .form__mask
             = f.label :image, class: 'test' do
-              = fa_icon 'image', class: 'far.fa-image'
+              %i.far.fa-image
               = f.file_field :image, class: 'hidden'
           = f.submit 'Send', class: 'send'    
  
