@@ -1,35 +1,16 @@
 .wrapper
-  .left
-    .left__top 
-      %p.name 
-        = current_user.name
-      %ul.menu
-        %li.cog
-          = link_to "groups/new" do
-            = fa_icon 'edit', class: 'icon'
-        %li.edit   
-          = link_to "users/edit" do
-            = fa_icon 'cog', class: 'icon'
-    .left__body
-      .groups
-        - current_user.groups.each do |group|
-          = link_to group_messages_path(group) ,class:"group" do
-            .group__name
-              = group.name
-            .group__message
-              = group.show_last_message
+  = render 'shared/side_bar'
   .main
     .main__top
       -# %p.border{border: solid 10px #eeeee }
       .group-top group
       .member Member : name name
       %a{href:"groups/edit"}
-        %a.button{:href => "groups/edit"}Edit
+        %a.button{href: "groups/edit"}Edit
     .main__body
       .messages
         = render @messages
         
-      
     .main__bottom
       -# %form.form-box
       -#   .form-and-icon
@@ -39,7 +20,6 @@
       -#         %input.hidden{type: "file",id: "image_input",name: "message[input]"}
       -#   .mask-send  
       -#     %input.send{:type => "submit",value:"Send"}/
-
       .form
         = form_for [@group, @message],class:"form-and-icon" do |f|
           = f.text_field :content, class: 'white-box', placeholder: 'type a message'
@@ -49,4 +29,3 @@
               = f.file_field :image, class: 'hidden'
           = f.submit 'Send', class: 'send'    
  
-
