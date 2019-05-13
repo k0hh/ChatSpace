@@ -5,8 +5,8 @@
       -# %p.border{border: solid 10px #eeeee }
       .group-top group
       .member Member : name name
-      %a{href:"groups/edit"}
-        %a.button{href: "groups/edit"}Edit
+      = link_to  edit_group_path(current_user) do
+        .button Edit
     .main__body
       .messages
         = render @messages
