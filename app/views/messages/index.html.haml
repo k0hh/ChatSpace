@@ -19,7 +19,7 @@
       -#         %i.far.fa-image
       -#         %input.hidden{type: "file",id: "image_input",name: "message[input]"}
       -#   .mask-send  
-      -#     %input.send{:type => "submit",value:"Send"}/
+      -#     %input.send{type: "submit",value:"Send"}/
       .form
         = form_for [@group, @message],class:"form-and-icon" do |f|
           = f.text_field :content, class: 'white-box', placeholder: 'type a message'
