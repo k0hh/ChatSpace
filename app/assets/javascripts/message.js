@@ -4,8 +4,6 @@ $(function() {
     if(message.image !== null) {
       image = `<img src= ${ message.image } class="lower-message__image" ></img> `
     }
-    console.log(image)
-    // var message = message.content ? `${ message.content }` : "";
     var html = `<div class="message" data-id="${message.id}">
                 <div class="message__top">
                   <p class="message__member">
@@ -37,20 +35,14 @@ $(function() {
       contentType: false
     })
     .done(function(data){
-      console.log(data.date)
-      console.log(data.user_name)
       var html = buildHTML(data);
-      console.log(html)
       $('.messages').append(html);
       $('#message_content').val(''); 
       $('.main__body').animate({scrollTop: $('.main__body')[0].scrollHeight});
-     
     })
     .fail(function(){
       alert('errorです');
     })
-    // $(function() {
     return false;
-    // });
   })
 })
