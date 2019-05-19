@@ -3,7 +3,8 @@
   .main
     .main__top
       -# %p.border{border: solid 10px #eeeee }
-      .group-top group
+      .group-top 
+        =@group.name
       .member Member : name name
       = link_to  edit_group_path(current_user) do
         .button Edit
@@ -19,13 +20,12 @@
       -#         %i.far.fa-image
       -#         %input.hidden{type: "file",id: "image_input",name: "message[input]"}
       -#   .mask-send  
-      -#     %input.send{:type => "submit",value:"Send"}/
+      -#     %input.send{type: "submit",value:"Send"}/
       .form
-        = form_for [@group, @message],class:"form-and-icon" do |f|
-          = f.text_field :content, class: 'white-box', placeholder: 'type a message'
+        = form_for [@group, @message],class:"form-and-icon",id:"new__message" do |f|
+          = f.text_field :content, class: 'white-box', placeholder: 'type a message',id:"textbox"
           .form__mask
             = f.label :image, class: 'test' do
               %i.far.fa-image
               = f.file_field :image, class: 'hidden'
-          = f.submit 'Send', class: 'send'    
- 
+          = f.submit 'Send', class: 'send'   
