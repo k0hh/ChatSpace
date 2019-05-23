@@ -15,6 +15,7 @@ class MessagesController < ApplicationController
       end
     else
     end
+
   end
 
   private

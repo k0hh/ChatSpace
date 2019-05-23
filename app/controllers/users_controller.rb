@@ -11,8 +11,23 @@ class UsersController < ApplicationController
     end
   end
 
+  def index
+    @users = User.order('id ASC')
+
+  end
+
+  def search
+    @products = Product.where('name LIKE(?)',"%#{params[:keyword]}%")
+    respind_to do |format|
+      format.html
+      fotmat.json
+  end
+  
   private
   def user_params
     params.require(:user).permit(:name,:email)
+    respind_to do |format|
+        format.html
+        format.json
   end
 end

@@ -43,6 +43,8 @@ $(function() {
     .fail(function(){
       alert('errorです');
     })
+    
     return false;
+    // });
   })
 })
