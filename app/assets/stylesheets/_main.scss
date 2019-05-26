@@ -27,11 +27,13 @@ html {
               font-size:20px;
               color:#333;
               display:inline-block;
-            }
+            } 
             .member {
               margin:15px 0 0 0;
               font-size:12px;
               color:#999;
+              display:inline-block;
+              position: relative;
             }
             .button {
               color:$sky_blue;
@@ -129,7 +131,6 @@ html {
                 clear:both;
                 z-index:11;
                 top:20px;
-                
               }
             }
         }
@@ -137,11 +138,9 @@ html {
     }
   }
 }
-
 ul.menu {
   display: flex;
 }
-
 p.group__name {
   color:$white;
   font-size:15px;
@@ -177,7 +176,6 @@ p.group__message{
     }
   }
 }
-
 .main__bottom {
   width: calc(100% - 300px);
   height:90px;
@@ -187,7 +185,6 @@ p.group__message{
   padding:20px 10px 0  40px;
   box-sizing:border-box;
 }
-
 .form {
   display: flex;
 }
@@ -199,7 +196,6 @@ p.group__message{
   width: calc(100% - 145px);
   box-sizing:border-box;
 }
-
 .white-box{
   width:calc(100% - 145px);
   font-size :16px;
@@ -212,20 +208,17 @@ p.group__message{
   position: relative;
   color:#434a54;
 }
-
 i.far.fa-image::before{
   font-size: x-large;
   display: inline-block;
   line-height: 35px;
   z-index:100;
   // position: absolute;
-}
-     
+}    
 .hidden {
   display: none;
   z-index:1000;
 }
-
 .test{
   position: absolute;
   right:10px;
@@ -245,9 +238,6 @@ i.far.fa-image::before{
 .new_message {
   width:100%;
 }
-
-
-
 p.message__time{
   font-size:12px;
   color:#999;
@@ -256,7 +246,6 @@ p.message__time{
   top:-5px;
   position:relative;
 }
-
 p.message__member{
   font-size: 16px;
   color:#434A54;
@@ -265,7 +254,6 @@ p.message__member{
   display:inline-block;
   padding-bottom:10px;
 }
-
 p.message__member__message{
   font-size:14px;
   color:#434A54;

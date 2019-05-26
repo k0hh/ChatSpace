@@ -43,9 +43,9 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|name|integer|null: false|
-|email|integer|null: false, unique: true|
-|password|integer|null: false|
+|name|string|null: false|
+|email|string|null: false, unique: true|
+|password|string|null: false|
 
 ### Association
 - has_many :groups, through: :members 
