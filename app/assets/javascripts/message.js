@@ -1,5 +1,4 @@
 $(document).on("turbolinks:load", function(){
-  $(function() {
       function buildHTML(message){
         var image = ""
         if(message.image !== null) {
@@ -32,8 +31,6 @@ $(document).on("turbolinks:load", function(){
           type: "POST",
           data: formData,
           dataType: 'json',
-          processData: false,
-          contentType: false
         })
         .done(function(data){
           var html = buildHTML(data);
@@ -47,5 +44,4 @@ $(document).on("turbolinks:load", function(){
         
         return false;
       })
-    })
   })
