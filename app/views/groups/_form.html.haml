@@ -22,6 +22,11 @@
       %label.chat-group-form__label{for: "chat_group_チャットメンバー"} チャットメンバー
     .chat-group-form__field--right
       #chat-group-users
+        .chat-group-user.clearfix.js-chat-member
+          %p.chat-group-user__name
+            = current_user.name
+
+
 
   .chat-group-form__field.clearfix
     .chat-group-form__field--left 
