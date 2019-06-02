@@ -72,7 +72,7 @@ $(function(){
       }
     })
     .fail(function() {
-      alert('errorです');
+      console.log('errorです');
     });
   };
   setInterval(reloadMessages,5000);
