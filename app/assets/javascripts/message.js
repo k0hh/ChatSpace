@@ -46,33 +46,7 @@ $(function(){
     })
     return false;
   })
-})
 
-$(function() {
-  function buildHTML(message){
-    var image = ""
-    console.log(message.dat)
-    if(message.image !== null) {
-      image = `<img src= ${ message.image } class= "lower-message__image" ></img> `
-    }
-    var html = `<div class="message" data-message-id="${message.id}">
-                <div class="message__top">
-                  <p class="message__member">
-                    ${message.user_name}
-                  </p>
-                  <p class="message__time">
-                    ${message.date}
-                  </p>
-                </div>
-                <div class="message__bottom">
-                  <p class="message__member__message">
-                    ${message.content}
-                  </p>
-                  ${image}
-                </div>
-              </div>`
-    return html;
-  }
   var reloadMessages = function() {
     var last_message_id = $(".message").last().data("message-id");
     var path = location.pathname
@@ -98,7 +72,7 @@ $(function() {
       }
     })
     .fail(function() {
-      console.log('errorです');
+      alert('errorです');
     });
   };
   setInterval(reloadMessages,5000);
