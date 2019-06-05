@@ -1,3 +1,5 @@
+// message.js 自動更新LGTM後
+
 $(function(){
   function buildHTML(message){
     var image = ""
@@ -47,6 +49,7 @@ $(function(){
     return false;
   })
 
+  
   var reloadMessages = function() {
     var last_message_id = $(".message").last().data("message-id");
     var path = location.pathname
@@ -77,3 +80,5 @@ $(function(){
   };
   setInterval(reloadMessages,5000);
 })
+
+
