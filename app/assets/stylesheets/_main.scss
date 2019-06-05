@@ -213,7 +213,6 @@ i.far.fa-image::before{
   display: inline-block;
   line-height: 35px;
   z-index:100;
-  // position: absolute;
 }    
 .hidden {
   display: none;
@@ -221,19 +220,14 @@ i.far.fa-image::before{
 }
 .test{
   position: absolute;
-  right:10px;
-  top: 0px;
   z-index:90;
-  // color: #000;
   font-size: x-large;
   font-size: 1.3rem;
 }
 .form__mask{
   position: absolute;
-  // width:100px;
-  // height:50px;
   top:30px;
-  right:155px;
+  right:190px;
 }
 .new_message {
   width:100%;
