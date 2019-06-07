@@ -1,3 +1,5 @@
+// message.js 自動更新LGTM後
+
 $(function(){
   function buildHTML(message){
     var image = ""
@@ -47,11 +49,13 @@ $(function(){
     return false;
   })
 
+  
   var reloadMessages = function() {
     var last_message_id = $(".message").last().data("message-id");
     var path = location.pathname
     var path2 = path.split('/')
-    var path3 = path2[path2.length - 2]
+    var path3 = path2[2]
+    console.log(path3)
     
     $.ajax({
       url: `/groups/${path3}/api/messages`,
@@ -65,6 +69,7 @@ $(function(){
         for ( message of messages ){
           if (message.group_id == path3){
             insertHTML = buildHTML(message);
+           
             $('#' + path3 + '.messages').append(insertHTML);
             $('.main__body').animate({scrollTop: $('.main__body')[0].scrollHeight});
           }
@@ -77,3 +82,5 @@ $(function(){
   };
   setInterval(reloadMessages,5000);
 })
+
+
