@@ -9,7 +9,7 @@
         - @members.each do |member|
           %li.member  
             = member.name
-      = link_to  edit_group_path(current_user) do
+      = link_to edit_group_path(@group) do
         .button Edit
     .main__body
       .messages{id: @group.id}
