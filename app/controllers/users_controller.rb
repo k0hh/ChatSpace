@@ -17,6 +17,7 @@ class UsersController < ApplicationController
       format.html
       format.json
     end
+    @groups = current_user.groups
   end
   
   private
