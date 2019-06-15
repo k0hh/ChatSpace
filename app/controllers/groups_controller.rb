@@ -21,7 +21,7 @@ class GroupsController < ApplicationController
 
   def edit
     @members = @group.users
-    @group.users << current_user
+    # @group.users << current_user
   end
   def update
     if @group.update(group_params)
