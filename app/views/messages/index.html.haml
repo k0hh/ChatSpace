@@ -6,9 +6,12 @@
         =@group.name
       %ul.member-list
         %li.member  Member :
+        %li.member  
+          = current_user.name
         - @members.each do |member|
-          %li.member  
-            = member.name
+          - if member != current_user
+            %li.member  
+              = member.name
       = link_to edit_group_path(@group) do
         .button Edit
     .main__body
