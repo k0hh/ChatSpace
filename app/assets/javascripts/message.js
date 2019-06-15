@@ -40,7 +40,8 @@ $(function(){
     .done(function(data) {
       var html = buildHTML(data);
       $('.messages').append(html);
-      $('#textbox').val(''); 
+      $('#textbox','#message_image').empty(); 
+      $(".new_message")[0].reset(); 
       $('.main__body').animate({scrollTop: $('.main__body')[0].scrollHeight});
     })
     .fail(function(){
@@ -49,7 +50,6 @@ $(function(){
     return false;
   })
 
-  
   var reloadMessages = function() {
     var last_message_id = $(".message").last().data("message-id");
     var path = location.pathname
