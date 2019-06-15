@@ -8,7 +8,7 @@
         %li.member  Member :
         %li.member  
           = current_user.name
-        - @members.each do |member|
+        - @group.users.each do |member|
           - if member != current_user
             %li.member  
               = member.name

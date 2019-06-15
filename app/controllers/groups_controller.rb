@@ -3,7 +3,6 @@ class GroupsController < ApplicationController
   def index
     @groups = current_user.groups
   end
-  
   def new
     @group = Group.new
     @group.users << current_user
@@ -12,7 +11,7 @@ class GroupsController < ApplicationController
 
   def create
     @group = Group.new(group_params)
-    @group.users << current_user
+    # @group.users << current_user
     @members =  @group.users 
     if @group.save
       redirect_to root_path, notice: 'グループを作成しました'
