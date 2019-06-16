@@ -24,7 +24,7 @@ $(function(){
               </div>`
     return html;
   }
- 
+
   $("#new_message").on('submit',function(e){
     e.preventDefault();
     var formData = new FormData(this);
@@ -69,7 +69,6 @@ $(function(){
         for ( message of messages ){
           if (message.group_id == path3){
             insertHTML = buildHTML(message);
-           
             $('#' + path3 + '.messages').append(insertHTML);
             $('.main__body').animate({scrollTop: $('.main__body')[0].scrollHeight});
           }
