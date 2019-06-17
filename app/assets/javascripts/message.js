@@ -2,10 +2,7 @@
 
 $(function(){
   function buildHTML(message){
-    var image = ""
-    if(message.image !== null) {
-      image = `<img src= ${ message.image } class="lower-message__image" ></img> `
-    }
+    var image = ( message.image ) ? `<img class= "lower-message__image" src=${message.image} >` : "";
     var html = `<div class="message" data-message-id="${message.id}">
                 <div class="message__top">
                   <p class="message__member">
@@ -29,6 +26,7 @@ $(function(){
     e.preventDefault();
     var formData = new FormData(this);
     var url = $(this).attr('action');
+    console.log(formData);
     $.ajax({
       url: url,
       type: "POST",
